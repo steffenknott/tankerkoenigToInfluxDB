@@ -1,1 +1,2 @@
-*.conf
+tankerkoenigToInfluxDB.conf
+stations.conf
