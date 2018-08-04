@@ -11,6 +11,8 @@
 import requests
 import json
 from influxdb import InfluxDBClient
+import os
+from os.path import exists
 
 config = {
     "influxHost" : "",
@@ -24,7 +26,7 @@ config = {
     "tankerkoenigChunkSize" : "",
     "debugMode" : False
 }
-configFile = os.path.dirname(os.path.realpath(__file__)) + "/pricesToInflux.conf"
+configFile = os.path.dirname(os.path.realpath(__file__)) + "/tankerkoenigToInfluxDB.conf"
 
 if exists(configFile) :
     with open(configFile, "r") as f:
