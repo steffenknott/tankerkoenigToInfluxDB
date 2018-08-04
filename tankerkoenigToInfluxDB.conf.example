@@ -1,0 +1,12 @@
+{
+    "influxHost" : "localhost",
+    "influxPort" : 8086,
+    "influxUsername" : "",
+    "influxPassword" : "",
+    "influxDatabase" : "testDb",
+    "influxMeasurement" : "spritpreise",
+    "influxStationIdTagName" : "tankstelle",
+    "tankerkoenigApikey" : "",
+    "tankerkoenigChunkSize" : 10,
+    "debugMode" : 0
+}
