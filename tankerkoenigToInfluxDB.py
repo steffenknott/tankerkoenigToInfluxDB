@@ -1,4 +1,4 @@
-# Modul: pricesToInflux
+# Modul: tankerkoenigToInfluxDB.py
 # Date: 16.05.2018
 # Author: steffenknott - Steffen Knott
 # Summary: Script to fetch prices and push then into an InfluxDB instance.
