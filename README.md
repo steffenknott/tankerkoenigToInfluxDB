@@ -31,4 +31,6 @@ If you want to use the python virtual environment provided by pipenc you should 
 
 `*/5 * * * * /path/to/tankerkoenigToInfluxDBWrapper.sh >/dev/null 2>&1`
 
+Make sure that you adjust the path to your installation of the script correctly. It is currently set to ``/path/to/tankerkoenigToInfluxDB``
+
 
