@@ -12,7 +12,7 @@ Small script that pulls gas prices from Tankerkönig and writes them into an Inf
 
 - Rename or create a copy of the `.example`files, which should be edited now to your needs:
 - Set proper values in tankerkoenigToInfluxDB.conf
-- Lookup gas stations GUIDs [here](https://creativecommons.tankerkoenig.de/TankstellenFinder/index.html) and add them to stations.conf. 
+- Lookup gas stations GUIDs [here](https://creativecommons.tankerkoenig.de/TankstellenFinder/index.html) and add them to stations.conf. Be aware that you don't add empty lines to this files, as they will be interpreted as invalid UUIDs
 
 ## What the script does
 
@@ -31,6 +31,6 @@ If you want to use the python virtual environment provided by pipenc you should 
 
 `*/5 * * * * /path/to/tankerkoenigToInfluxDBWrapper.sh >/dev/null 2>&1`
 
-Make sure that you adjust the path to your installation of the script correctly. It is currently set to ``/path/to/tankerkoenigToInfluxDB``
+Make sure that you adjust the path to your installation of the script correctly. It is currently set to ``/path/to/tankerkoenigToInfluxDB``. Depending on your configuration you'll might need to add the path to the pipenv executable to the PATH variable of the ``tankerkoenigToInfluxDBWrapper.sh`` script.
 
 
