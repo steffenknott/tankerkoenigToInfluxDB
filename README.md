@@ -3,13 +3,14 @@ Small script that pulls gas prices from Tankerkönig and writes them into an Inf
 
 ## Requirements
 
-- Python 3 (may work with Python 2 - didn't test it)
+- Python 3 (may work with Python 2 - didn't test it). Optional: I recommend the use of [pipenv](https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv) which can be installed with ``pip3 install pipenv``. This keeps your python installation clean if you use several different python versions and modules.
 - Tankerkönig API Access - you need to register for an API Key at https://creativecommons.tankerkoenig.de
-- [influxdb](https://github.com/influxdata/influxdb-python) package
+- [influxdb](https://github.com/influxdata/influxdb-python) python package
 - A running InfluxDB instance
 
 ## Setup
 
+- Rename or create a copy of the `.example`files, which should be edited now to your needs:
 - Set proper values in tankerkoenigToInfluxDB.conf
 - Lookup gas stations GUIDs [here](https://creativecommons.tankerkoenig.de/TankstellenFinder/index.html) and add them to stations.conf. 
 
@@ -19,10 +20,15 @@ The scripts loads all available gas prices for each gas station listed in statio
 
 ## Run the script
 
-Run the script like `python3 tankerkoenigToInfluxDB.py`. 
+Run ``pipenv install`` to install all requirements. You can enter the environment with ``pipenv shell``. In this shell you can now run the script with ``python tankerkoenigToInfluxDB.py``. You can also run the python script directly with ``tankerkoenigToInfluxDB.py``, but you have to make the script executable first: `chmod +x tankerkoenigToInfluxDB.py`
+
 
 You can add the script to your crontab to run it every 5 minutes or so:
 
 `*/5 * * * * /path/to/tankerkoenigToInfluxDB.py >/dev/null 2>&1`
 
-You have to make the script executable first: `chmod +x tankerkoenigToInfluxDB.py`
+If you want to use the python virtual environment provided by pipenc you should add this script:
+
+`*/5 * * * * /path/to/tankerkoenigToInfluxDBWrapper.sh >/dev/null 2>&1`
+
+
