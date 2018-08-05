@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Modul: tankerkoenigToInfluxDB.py
 # Date: 16.05.2018
 # Author: steffenknott - Steffen Knott
